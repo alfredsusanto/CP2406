@@ -8,27 +8,31 @@ public class Billing
     private double couponValue;
     public double TAX = 0.08;
 
-    public static void main()
+    aaaaaaaaaaaaaaaaa(double price, int num, double coupon)
     {
-
+        computeBill(price);
+        computeBill(price, num);
+        computeBill(price, num, coupon);
     }
 
     public double computeBill(double bookPrice)
     {
-
         double totalPrice = bookPrice + (bookPrice* TAX);
+        System.out.println(totalPrice);
         return totalPrice;
     }
 
     public double computeBill(double bookPrice, int quantity)
     {
         double totalPrice = bookPrice * quantity + (bookPrice* TAX);
+        System.out.println(totalPrice);
         return totalPrice;
     }
 
     public double computeBill(double bookPrice, int quantity, double couponValue )
     {
         double totalPrice = bookPrice * quantity + (bookPrice* TAX) - couponValue;
+        System.out.println(totalPrice);
         return totalPrice;
     }
 }
