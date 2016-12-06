@@ -1,38 +1,37 @@
 /**
- * Created by jc348287 on 29/11/2016.
+ * Created by Fred Sus on 5/12/2016.
  */
 public class Billing
 {
-    private double bookPrice;
-    private int quantity;
-    private double couponValue;
-    public double TAX = 0.08;
+    double tax;
+    double total;
+    double totalDue;
+    double coupon;
 
-    aaaaaaaaaaaaaaaaa(double price, int num, double coupon)
+    public void computeBill(double price)
     {
-        computeBill(price);
-        computeBill(price, num);
-        computeBill(price, num, coupon);
+        tax = price * 0.08;
+        totalDue = price + tax;
     }
 
-    public double computeBill(double bookPrice)
+    public void computeBill(double price, double quantity)
     {
-        double totalPrice = bookPrice + (bookPrice* TAX);
-        System.out.println(totalPrice);
-        return totalPrice;
+        tax = price * 0.08;
+        total = price * quantity;
+        totalDue = tax + total;
     }
 
-    public double computeBill(double bookPrice, int quantity)
+    public void computeBill(double price, double quantity, double couponvalue)
     {
-        double totalPrice = bookPrice * quantity + (bookPrice* TAX);
-        System.out.println(totalPrice);
-        return totalPrice;
+        tax = price * 0.08;
+        total = price * quantity;
+        coupon = total - couponvalue;
+        totalDue = tax + coupon;
     }
 
-    public double computeBill(double bookPrice, int quantity, double couponValue )
+    public double totalDue()
     {
-        double totalPrice = bookPrice * quantity + (bookPrice* TAX) - couponValue;
-        System.out.println(totalPrice);
-        return totalPrice;
+        return totalDue;
     }
 }
+
