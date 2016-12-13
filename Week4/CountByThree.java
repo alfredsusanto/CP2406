@@ -6,12 +6,12 @@ public class CountByThree
     public static void main (String[] args)
     {
         int count;
-        for(count = 3; count <=300; count+=3)
+        for(count = 3; count <= (3*100); count+=3)
         {
-            if (count % 30 == 0)
+            if (count % (3*10) == 0)
                 System.out.println(count);
             else
-                System.out.println(count + ", ");
+                System.out.print(count + ", ");
         }
     }
 }

@@ -8,13 +8,14 @@ public class CountByAnything
     {
         int count;
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter a number:");
-        int UserInput = input.nextInt();
+        System.out.print("Enter a number:");
+        int userInput = input.nextInt();
 
-        for(count = UserInput; count<=( ); ++count)
-            if (count*10 == 0)
+        for(count = userInput; count <=(userInput * 100 ); count+=userInput) {
+            if (count % (userInput * 10) == 0)
                 System.out.println(count);
             else
-                System.out.println(count + ", ");
+                System.out.print(count + ", ");
+        }
     }
 }
