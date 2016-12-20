@@ -19,7 +19,7 @@ public class LittleLeagueBaseballGame extends BaseballGame
             super.setTeam1Score(inning, score);
         }
     }
-    public void setTeam2SCore(int inning, int score)
+    public void setTeam2Score(int inning, int score)
     {
         if (inning > 5)
         {
@@ -27,7 +27,7 @@ public class LittleLeagueBaseballGame extends BaseballGame
         }
         else
         {
-            super.setTeam2SCore(inning,score);
+            super.setTeam2Score(inning,score);
         }
     }
 }

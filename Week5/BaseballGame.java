@@ -82,11 +82,11 @@ public class BaseballGame {
         {firstTeamScore[inning] = score ;}
     }
 
-    public int getTeam2SCore(int inning) {
+    public int getTeam2Score(int inning) {
         return secondTeamScore[inning];
     }
 
-    public void setTeam2SCore(int inning, int score) {
+    public void setTeam2Score(int inning, int score) {
         if(inning<countInning(secondTeamScore))
         {
             System.out.println("Cannot change inning score");
@@ -113,7 +113,7 @@ public class BaseballGame {
         }
         else
         {
-            setTeam2SCore(countInning(secondTeamScore), score);
+            setTeam2Score(countInning(secondTeamScore), score);
         }
 
     }

@@ -18,14 +18,14 @@ public class HighSchoolBaseballGame extends BaseballGame {
         }
     }
 
-    public void setTeam2SCore(int inning, int score) {
+    public void setTeam2Score(int inning, int score) {
         if (inning > 6)
         {
             System.out.println("No inning "+ inning);
         }
         else
         {
-            super.setTeam2SCore(inning,score);
+            super.setTeam2Score(inning,score);
         }
     }
 }
