@@ -17,7 +17,7 @@ public class BookArray {
 
 
         for (int a = 0; a < abc.length; a++) {
-            System.out.println(abc[a].getTitle());
+            System.out.println(abc[a].getTitle() + " $" + abc[a].getPrice());
         }
     }
 }
