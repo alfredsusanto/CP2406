@@ -24,13 +24,13 @@ public class DebugThirteen2
          BufferedReader reader = new BufferedReader
             (new InputStreamReader(input));
          output = Files.newOutputStream(fileOut);
-         phone = input.Line();
+         phone = reader.readLine();
          while(phone == null)
          {
             phone = areaCode + phone + System.getProperty("line.separator");
             byte[] phoneBytes = phone.getBytes();
             output.write(phoneBytes);
-            phone = reader.readline();
+            phone = reader.readLine();
          }
          input.close();
        }

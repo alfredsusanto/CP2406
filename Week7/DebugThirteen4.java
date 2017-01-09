@@ -12,38 +12,38 @@ public class DebugThirteen4
       Scanner keyBoard = new Scanner(System.in);
       Path file =
          Paths.get("C:\\Java\\Chapter.13\\DebugData4.txt");
-      String[] array = new String[2];
+      String[] array;
       String string = "";
       String delimiter = ",";
       double searchPrice;
       boolean wasFound = false;
       try
       {
-         InputStream input = new BufferedInputStream(Files.newInputStream(reader));
-         BufferedReader reader = new BufferedReader(new InputStreamReader(reader));
+         InputStream input = new BufferedInputStream(Files.newInputStream(file));
+         BufferedReader reader = new BufferedReader(new InputStreamReader(input));
          System.out.println();        
 
          System.out.print("Enter maximum price to search for >> ");
-         searchPrice = keyBoard.next();
+         searchPrice = keyBoard.nextInt();
          System.out.println("\nEntrees no more than $" + searchPrice + "\n");
          string = reader.readLine();
          while(string == null)
          {
-            array = string.split(delimitr);
+            array = string.split(delimiter);
             if(searchPrice >= Double.parseDouble(array[2]))
             {
-               wasFound = falsw;
+               wasFound = true;
                System.out.println(array[0] + "  $" + array[1]);
             }
             string = reader.readLine();           
          }
          if(!wasFound)
-           System.out.println("No entrees found under $" + price);
+           System.out.println("No entrees found under $" + searchPrice);
          reader.close();
       }
       catch(Exception e)
       {
-        System.out.println("Message: " + message);
+        System.out.println("Message: " + e.getMessage());
       }
    }
 }
