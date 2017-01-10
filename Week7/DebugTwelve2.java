@@ -9,7 +9,7 @@ public class DebugTwelve2
       final byte HIGHBYTE = 127;
       try
       {
-         int allowed = (byte)(HIGHBYTE - num1);
+         byte allowed = (byte)(HIGHBYTE - num1);
          if(num2 > allowed)
             throw(new ArithmeticException());
          result = (byte)(num1 + num2);

@@ -1,24 +1,30 @@
 // Program describes two files
 // tells you which one is newer and which one is larger
-import java.nio.file.*;
-import java.nio.file.attribute.*;
+
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.attribute.BasicFileAttributes;
+
 public class DebugThirteen1
 {
    public static void main(String[] args)
    {
-      Path file1 = Paths.get("C:\\Users\\Fred Sus\\IdeaProjects\\CP2406\\Week7\\DebugData1.txt");
-      Path file2 = Paths.get("C:\\Users\\Fred Sus\\IdeaProjects\\CP2406\\Week7\\DebugData2.txt");
+      Path file1 =
+              Paths.get("C:\\Users\\Fred Sus\\IdeaProjects\\CP2406\\Week7\\DebugData1.txt");
+      Path file2 =
+              Paths.get("C:\\Users\\Fred Sus\\IdeaProjects\\CP2406\\Week7\\DebugData2.txt");
       try
       {
          BasicFileAttributes attr1 =
-            Files.readAttributes(file1, BasicFileAttributes.class);
+                 Files.readAttributes(file1, BasicFileAttributes.class);
          System.out.println("File: " + file1.getFileName());
          System.out.println("Creation time " + attr1.creationTime());
          System.out.println("Last modified time " + attr1.lastModifiedTime());
          System.out.println("Size " + attr1.size());
          BasicFileAttributes attr2 =
-            Files.readAttributes(file2, BasicFileAttributes.class);
+                 Files.readAttributes(file2, BasicFileAttributes.class);
          System.out.println("\nFile: " + file2.getFileName());
          System.out.println("Creation time " + attr2.creationTime());
          System.out.println("Last modified time " + attr2.lastModifiedTime());
@@ -34,7 +40,7 @@ public class DebugThirteen1
       }
       catch(IOException e)
       {
-          System.out.println("IO Exception");
+         System.out.println("IO Exception");
       }
    }
 }

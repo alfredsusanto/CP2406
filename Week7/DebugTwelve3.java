@@ -1,9 +1,10 @@
 // Catch exceptions for array index out of bounds
 // or dividing by 0 
 import javax.swing.*;
+
 public class DebugTwelve3
 {
-   public static void main(String[] args) 
+   public static void main(String[] args)
    {
       String inStr;
       int num, result;
@@ -11,6 +12,7 @@ public class DebugTwelve3
       inStr = JOptionPane.showInputDialog(null, "Enter a number ");
       num = Integer.parseInt(inStr);
       try
+
       {
          for(int x = 0; x < array.length; ++x)
          {
@@ -22,7 +24,7 @@ public class DebugTwelve3
       }
       catch(ArithmeticException error)
       {
-          JOptionPane.showMessageDialog(null, "Arithmetic error - division by 0");   
+         JOptionPane.showMessageDialog(null, "Arithmetic error - division by 0");
       }
       catch(IndexOutOfBoundsException error)
       {
