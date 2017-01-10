@@ -8,7 +8,7 @@ public class DebugThirteen3
    public static void main(String[] args)
    {
       Path file =
-         Paths.get("C:\\Java\\Chapter.13\\DebugData4.txt");
+         Paths.get("C:\\Users\\Fred Sus\\IdeaProjects\\CP2406\\Week7\\DebugData4.txt");
       Scanner kb = new Scanner(System.in);
       String string = "";
       String delimiter = ",";

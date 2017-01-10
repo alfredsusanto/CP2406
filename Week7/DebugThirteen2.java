@@ -11,9 +11,9 @@ public class DebugThirteen2
    public static void main(String[] args)
    {
       Path fileIn =
-         Paths.get("C:\\Java\\Chapter.13\\DebugData3.txt");
+         Paths.get("C:\\Users\\Fred Sus\\IdeaProjects\\CP2406\\Week7\\DebugData3.txt");
       Path fileOut =
-         Paths.get("C:\\Java\\Chapter.13\\DebugData3New.txt");
+         Paths.get("C:\\Users\\Fred Sus\\IdeaProjects\\CP2406\\Week7\\DebugData3New.txt");
       String areaCode = "(312) ";
       String phone;
       InputStream input = null;

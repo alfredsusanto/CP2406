@@ -7,8 +7,8 @@ public class DebugThirteen1
 {
    public static void main(String[] args)
    {
-      Path file1 = Paths.get("C:\\Java\\Chapter.13\\DebugData1.txt");
-      Path file2 = Paths.get("C:\\Java\\Chapter.13\\DebugData2.txt");
+      Path file1 = Paths.get("C:\\Users\\Fred Sus\\IdeaProjects\\CP2406\\Week7\\DebugData1.txt");
+      Path file2 = Paths.get("C:\\Users\\Fred Sus\\IdeaProjects\\CP2406\\Week7\\DebugData2.txt");
       try
       {
          BasicFileAttributes attr1 =
